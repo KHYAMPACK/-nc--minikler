@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-leaf: #3f9b5a;
+  --color-leaf-dark: #2f7a45;
+  --color-leaf-soft: #d8f0df;
+  --color-sun: #f0c24b;
+  --color-sun-soft: #fff4cc;
+  --color-coral: #e76f51;
+  --color-coral-dark: #cf5a3e;
+  --color-berry: #9b5de5;
+  --color-sky: #e8f6ff;
+  --color-meadow: #f3fbf5;
+  --color-ink: #1c2a22;
+  --color-muted: #4d5c54;
+  --color-line: #d5e6da;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #1ebe57;
+  --color-surface: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-leaf: var(--color-leaf);
+  --color-leaf-dark: var(--color-leaf-dark);
+  --color-leaf-soft: var(--color-leaf-soft);
+  --color-sun: var(--color-sun);
+  --color-sun-soft: var(--color-sun-soft);
+  --color-coral: var(--color-coral);
+  --color-coral-dark: var(--color-coral-dark);
+  --color-berry: var(--color-berry);
+  --color-sky: var(--color-sky);
+  --color-meadow: var(--color-meadow);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --color-line: var(--color-line);
+  --color-whatsapp: var(--color-whatsapp);
+  --color-whatsapp-dark: var(--color-whatsapp-dark);
+  --color-surface: var(--color-surface);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fredoka);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-meadow);
+  color: var(--color-ink);
+  font-family: var(--font-nunito), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-leaf) 28%, white);
+}
+
+.page-shell {
+  background-color: var(--color-meadow);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(232, 246, 255, 0.95), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 95% 5%, rgba(255, 244, 204, 0.7), transparent 50%),
+    radial-gradient(ellipse 50% 35% at 80% 90%, rgba(216, 240, 223, 0.8), transparent 55%),
+    radial-gradient(circle at 18% 42%, rgba(139, 195, 74, 0.08) 0 2.5rem, transparent 2.6rem),
+    radial-gradient(circle at 72% 58%, rgba(231, 111, 81, 0.07) 0 1.8rem, transparent 1.9rem),
+    radial-gradient(circle at 48% 78%, rgba(240, 194, 75, 0.1) 0 2.2rem, transparent 2.3rem);
+}
+
+.hero-plane {
+  background:
+    linear-gradient(165deg, #dff3ff 0%, #eefcf2 42%, #fff7df 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-plane::before,
+.hero-plane::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.hero-plane::before {
+  width: 18rem;
+  height: 18rem;
+  top: -4rem;
+  right: -3rem;
+  background: radial-gradient(circle, rgba(168, 217, 106, 0.45), transparent 70%);
+  animation: float-soft 9s ease-in-out infinite;
+}
+
+.hero-plane::after {
+  width: 14rem;
+  height: 14rem;
+  bottom: -3rem;
+  left: -2rem;
+  background: radial-gradient(circle, rgba(244, 162, 97, 0.35), transparent 70%);
+  animation: float-soft 11s ease-in-out infinite reverse;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.75s ease-out both;
+}
+
+.animate-fade-up-delay {
+  animation: fade-up 0.75s ease-out 0.12s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fade-up 0.75s ease-out 0.24s both;
+}
+
+.animate-pop-in {
+  animation: pop-in 0.85s ease-out both;
+}
+
+.animate-float {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-fade-up-delay,
+  .animate-fade-up-delay-2,
+  .animate-pop-in,
+  .animate-float,
+  .hero-plane::before,
+  .hero-plane::after {
+    animation: none;
+  }
 }
