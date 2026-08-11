@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/hakkimizda",
     "/programlar",
     "/beslenme",
+    "/galeri",
     "/sss",
     "/iletisim",
     "/gizlilik",

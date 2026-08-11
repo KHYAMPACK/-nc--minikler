@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CtaBanner } from "@/components/CtaBanner";
+import { VisitStrip } from "@/components/VisitStrip";
 import { faqs } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
@@ -34,25 +34,22 @@ export default function SssPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-leaf">
-          SSS
-        </p>
-        <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
-          Sıkça sorulan sorular
+      <section className="mx-auto max-w-3xl px-4 pb-8 pt-28 sm:px-6 lg:pt-32">
+        <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
+          Sıkça Sorulan Sorular
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+        <p className="mt-5 text-lg leading-relaxed text-muted">
           Saatler, yaş grupları, program seçenekleri ve beslenme hakkında en çok
           sorulanlar.
         </p>
 
-        <div className="mt-12 max-w-3xl space-y-4">
+        <div className="mt-12 space-y-1">
           {faqs.map((item) => (
             <details
               key={item.q}
-              className="group border-b border-line pb-4 open:pb-5"
+              className="group border-b border-line py-4 open:pb-5"
             >
-              <summary className="cursor-pointer list-none font-display text-xl text-ink marker:content-none [&::-webkit-details-marker]:hidden">
+              <summary className="cursor-pointer list-none font-display text-lg font-semibold text-ink marker:content-none sm:text-xl [&::-webkit-details-marker]:hidden">
                 <span className="flex items-start justify-between gap-4">
                   {item.q}
                   <span className="mt-1 text-leaf transition group-open:rotate-45">
@@ -65,8 +62,8 @@ export default function SssPage() {
           ))}
         </div>
       </section>
-      <CtaBanner
-        title="Sorunuz listede yok mu?"
+      <VisitStrip
+        title="Sorunuz Listede Yok Mu?"
         subtitle="WhatsApp veya telefon ile yazın; size özel yanıtlayalım."
       />
     </>

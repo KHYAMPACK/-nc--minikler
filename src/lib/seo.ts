@@ -77,9 +77,9 @@ export const pageMeta = {
       "Denizli'nin ilk ve tek butik kreşi Şahika Öncü Minikler'i tanıyın. Çocuk merkezli yaklaşım, güven ve doğal yaşam.",
   },
   programlar: {
-    title: "Programlar ve Yaş Grupları | Öncü Minikler Kreş",
+    title: "Programlar ve Yaş Grupları | Şahika Öncü Minikler Kreş",
     description:
-      "18–48 ay yaş grupları, tam gün ve yarım gün programlar. En fazla 15 çocuk, iki uzman. Denizli butik kreş programları.",
+      "18–48 ay yaş grupları, Montessori ilhamı, branş öğretmenleri, tam gün ve yarım gün programlar. Denizli butik kreş.",
   },
   beslenme: {
     title: "Organik Beslenme | Şahika Öncü Minikler Kreş",
@@ -87,9 +87,14 @@ export const pageMeta = {
       "İşlenmiş gıda yok. Organik makarna, salça, yumurta ve pekmezle doğal beslenme. Denizli kreş yemek menüsü.",
   },
   sss: {
-    title: "Sıkça Sorulan Sorular | Öncü Minikler Kreş",
+    title: "Sıkça Sorulan Sorular | Şahika Öncü Minikler Kreş",
     description:
       "Saatler, program seçenekleri, yaş grupları, beslenme ve kayıt hakkında sık sorulan sorular.",
+  },
+  galeri: {
+    title: "Galeri | Şahika Öncü Minikler Kreş Denizli",
+    description:
+      "Şahika Öncü Minikler Kreş'ten kareler. Denizli Merkezefendi butik kreş ortamı ve etkinlikler.",
   },
   iletisim: {
     title: "İletişim | Kreş Denizli — Şahika Öncü Minikler",

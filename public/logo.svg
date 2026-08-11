@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Şahika Öncü Minikler">
+  <circle cx="100" cy="100" r="100" fill="#ffffff"/>
+  <circle cx="48" cy="102" r="34" fill="#4CAF50"/>
+  <circle cx="78" cy="98" r="36" fill="#8BC34A"/>
+  <circle cx="98" cy="118" r="18" fill="#B7E4C7"/>
+  <circle cx="108" cy="78" r="28" fill="#FFF59D"/>
+  <circle cx="138" cy="88" r="34" fill="#FF7043"/>
+  <circle cx="148" cy="118" r="24" fill="#FF9800"/>
+  <circle cx="172" cy="108" r="20" fill="#9C27B0"/>
+  <text x="100" y="106" text-anchor="middle" dominant-baseline="middle" fill="#1a1a1a" font-family="Quicksand, Segoe UI, Arial, sans-serif" font-size="14.5" font-weight="700" letter-spacing="0.01em">ŞAHİKA ÖNCÜ MİNİKLER<tspan dy="-6" font-size="6.5" font-weight="600">®</tspan></text>
+</svg>

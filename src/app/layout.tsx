@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fredoka, Nunito } from "next/font/google";
+import { Quicksand, Source_Sans_3 } from "next/font/google";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -7,17 +7,19 @@ import { localBusinessJsonLd, pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
-const display = Fredoka({
+/* Quicksand: rounded, multi-weight, solid Turkish (ş/ö/ü/ı/ğ/İ) */
+const display = Quicksand({
   subsets: ["latin", "latin-ext"],
   weight: ["500", "600", "700"],
-  variable: "--font-fredoka",
+  variable: "--font-quicksand",
   display: "swap",
 });
 
-const body = Nunito({
+/* Source Sans 3: highly readable body with full Turkish support */
+const body = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-nunito",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-source",
   display: "swap",
 });
 
@@ -33,10 +35,13 @@ export const metadata: Metadata = {
   creator: siteConfig.name,
   icons: {
     icon: [
-      { url: "/icon-48.png", type: "image/png", sizes: "48x48" },
-      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon-32.png",
   },
   openGraph: {
     type: "website",

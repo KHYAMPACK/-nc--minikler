@@ -11,12 +11,9 @@ export const metadata: Metadata = {
 
 export default function GizlilikPage() {
   return (
-    <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:py-20">
-      <p className="text-sm font-semibold uppercase tracking-[0.16em] text-leaf">
-        Yasal
-      </p>
-      <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
-        Gizlilik ve KVKK
+    <section className="mx-auto max-w-3xl px-4 pb-16 pt-28 sm:px-6 lg:pb-20 lg:pt-32">
+      <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
+        Gizlilik Ve KVKK
       </h1>
       <p className="mt-6 leading-relaxed text-muted">
         {siteConfig.name}, 6698 sayılı Kişisel Verilerin Korunması Kanunu
@@ -25,7 +22,7 @@ export default function GizlilikPage() {
 
       <div className="mt-10 space-y-8 text-muted leading-relaxed">
         <div>
-          <h2 className="font-display text-2xl text-ink">Veri sorumlusu</h2>
+          <h2 className="font-display text-2xl text-ink">Veri Sorumlusu</h2>
           <p className="mt-3">
             {siteConfig.name}
             <br />
@@ -39,7 +36,7 @@ export default function GizlilikPage() {
 
         <div>
           <h2 className="font-display text-2xl text-ink">
-            Hangi verileri topluyoruz?
+            Hangi Verileri Topluyoruz?
           </h2>
           <p className="mt-3">
             İletişim formu veya WhatsApp üzerinden ilettiğiniz ad, telefon ve
@@ -49,7 +46,7 @@ export default function GizlilikPage() {
         </div>
 
         <div>
-          <h2 className="font-display text-2xl text-ink">İşleme amacı</h2>
+          <h2 className="font-display text-2xl text-ink">İşleme Amacı</h2>
           <p className="mt-3">
             Bilgi taleplerini karşılamak, randevu / kayıt süreçlerini yürütmek
             ve sizinle iletişime geçmek.

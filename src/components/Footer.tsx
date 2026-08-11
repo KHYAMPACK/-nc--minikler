@@ -1,107 +1,99 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BrandName, Logo } from "@/components/Logo";
 import { navLinks, siteConfig, whatsappLink } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-line bg-[#1e3a2a] text-[#e8f6ee]">
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-24 opacity-40"
+        className="pointer-events-none absolute inset-x-0 top-0 h-20 opacity-35"
         aria-hidden="true"
         style={{
           background:
-            "radial-gradient(circle at 15% 0%, #8BC34A 0 0.6rem, transparent 0.7rem), radial-gradient(circle at 28% 20%, #F0C24B 0 0.45rem, transparent 0.55rem), radial-gradient(circle at 72% 10%, #E76F51 0 0.55rem, transparent 0.65rem), radial-gradient(circle at 88% 25%, #9B5DE5 0 0.4rem, transparent 0.5rem)",
+            "radial-gradient(circle at 12% 0%, #8BC34A 0 0.55rem, transparent 0.65rem), radial-gradient(circle at 28% 30%, #F0C24B 0 0.4rem, transparent 0.5rem), radial-gradient(circle at 78% 8%, #E76F51 0 0.5rem, transparent 0.6rem), radial-gradient(circle at 92% 35%, #9B5DE5 0 0.35rem, transparent 0.45rem)",
         }}
       />
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
-        <div>
-          <div className="flex items-center gap-3">
-            <Image
-              src="/logo.png"
-              alt=""
-              width={48}
-              height={48}
-              className="h-12 w-12 rounded-full bg-white object-cover"
-            />
-            <p className="font-display text-xl font-semibold text-white">
-              {siteConfig.legalName}
-            </p>
-          </div>
-          <p className="mt-4 text-sm leading-relaxed text-[#b7d4c2]">
-            Denizli Merkezefendi&apos;de butik kreş. Çocuk merkezli eğitim,
-            organik beslenme ve güvenli küçük gruplar.
-          </p>
-        </div>
 
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8BC34A]">
-            Sayfalar
-          </p>
-          <ul className="mt-4 space-y-2">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className="text-sm text-[#e8f6ee]/85 transition hover:text-white"
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-            <li>
-              <Link
-                href="/gizlilik"
-                className="text-sm text-[#e8f6ee]/85 transition hover:text-white"
-              >
-                Gizlilik / KVKK
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#8BC34A]">
-            İletişim
-          </p>
-          <address className="mt-4 space-y-2 text-sm not-italic leading-relaxed text-[#e8f6ee]/85">
-            <p>{siteConfig.address.full}</p>
-            <p>
-              <a
-                href={`tel:${siteConfig.phoneTel}`}
-                className="text-white hover:text-white/80"
-              >
-                Ara: {siteConfig.phoneDisplay}
-              </a>
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between">
+          <div className="max-w-md">
+            <div className="flex items-center gap-3">
+              <Logo size={56} className="shrink-0 rounded-full" />
+              <div>
+                <BrandName
+                  size="md"
+                  className="text-white [&_span:last-child]:text-[#b7d4c2]"
+                />
+                <p className="mt-1.5 text-sm text-[#b7d4c2]">
+                  {siteConfig.hours.display}
+                </p>
+              </div>
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-[#b7d4c2]">
+              {siteConfig.address.full}
             </p>
-            <p>
+            <div className="mt-6 flex flex-wrap gap-3">
               <a
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-whatsapp hover:brightness-110"
+                className="inline-flex rounded-xl bg-whatsapp px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-whatsapp-dark"
               >
-                WhatsApp: {siteConfig.phoneDisplay}
+                WhatsApp
               </a>
-            </p>
-            <p>
               <a
-                href={`mailto:${siteConfig.email}`}
-                className="hover:text-white"
+                href={`tel:${siteConfig.phoneTel}`}
+                className="inline-flex rounded-xl border border-white/25 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
               >
+                Ara: {siteConfig.phoneDisplay}
+              </a>
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-xl border border-white/25 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white/10"
+              >
+                Yol tarifi
+              </a>
+            </div>
+          </div>
+
+          <div className="lg:text-right">
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 lg:justify-end">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-[#e8f6ee]/85 transition hover:text-white"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href="/gizlilik"
+                  className="text-sm text-[#e8f6ee]/85 transition hover:text-white"
+                >
+                  Gizlilik / KVKK
+                </Link>
+              </li>
+            </ul>
+            <p className="mt-6 text-sm text-[#b7d4c2]">
+              <a href={`mailto:${siteConfig.email}`} className="hover:text-white">
                 {siteConfig.email}
               </a>
-            </p>
-            <p>
+              <span className="mx-2 opacity-40">·</span>
               <a
                 href={siteConfig.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white"
               >
-                Instagram {siteConfig.instagramHandle}
+                {siteConfig.instagramHandle}
               </a>
             </p>
-          </address>
+          </div>
         </div>
       </div>
 

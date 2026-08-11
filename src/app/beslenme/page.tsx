@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CtaBanner } from "@/components/CtaBanner";
+import { VisitStrip } from "@/components/VisitStrip";
 import { nutritionPoints } from "@/lib/content";
 import { pageMeta } from "@/lib/seo";
 
@@ -17,36 +17,37 @@ export const metadata: Metadata = {
 export default function BeslenmePage() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
-        <p className="text-sm font-semibold uppercase tracking-[0.16em] text-leaf">
-          Beslenme
-        </p>
-        <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
-          Organik ve doğal beslenme
+      <section className="mx-auto max-w-3xl px-4 pb-10 pt-28 sm:px-6 lg:pt-32">
+        <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">
+          Organik Ve Doğal Beslenme
         </h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted">
+        <p className="mt-6 text-lg leading-relaxed text-muted">
           Şahika Öncü Minikler&apos;de işlenmiş gıda kullanmıyoruz. Miniklerin
           sofrası; doğal, organik ve mümkün olduğunca kendi üretimimizle
           hazırlanır.
         </p>
+      </section>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2">
-          {nutritionPoints.map((item) => (
-            <article
-              key={item.title}
-              className="border-t-[3px] border-leaf pt-5"
-            >
-              <h2 className="font-display text-2xl text-leaf-dark">
-                {item.title}
-              </h2>
-              <p className="mt-3 leading-relaxed text-muted">{item.text}</p>
-            </article>
-          ))}
-        </div>
+      <section className="border-y border-line">
+        {nutritionPoints.map((item, i) => (
+          <article
+            key={item.title}
+            className={`mx-auto grid max-w-6xl gap-2 px-4 py-10 sm:grid-cols-[12rem_1fr] sm:gap-10 sm:px-6 sm:py-12 ${
+              i > 0 ? "border-t border-line" : ""
+            }`}
+          >
+            <h2 className="font-display text-xl font-semibold text-leaf-dark sm:text-2xl">
+              {item.title}
+            </h2>
+            <p className="leading-relaxed text-muted sm:text-lg">{item.text}</p>
+          </article>
+        ))}
+      </section>
 
-        <div className="mt-16 max-w-3xl rounded-2xl bg-sun-soft/80 px-6 py-8 sm:px-8">
-          <h2 className="font-display text-2xl text-ink">
-            Sofrada da öğrenme var
+      <section className="bg-sun-soft/70">
+        <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+          <h2 className="font-display text-2xl font-semibold text-ink">
+            Sofrada Da Öğrenme Var
           </h2>
           <p className="mt-3 leading-relaxed text-muted">
             Yemek zamanı yalnızca doymak değil; masa alışkanlığı, paylaşma ve
@@ -55,8 +56,9 @@ export default function BeslenmePage() {
           </p>
         </div>
       </section>
-      <CtaBanner
-        title="Menü ve program detayı için yazın"
+
+      <VisitStrip
+        title="Menü Ve Program Detayı İçin Yazın"
         subtitle="Beslenme yaklaşımımız ve günlük rutin hakkında sorularınızı yanıtlayalım."
       />
     </>

@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Şahika Öncü Minikler Kreş",
-  shortName: "Öncü Minikler",
+  shortName: "Şahika Öncü Minikler",
   legalName: "Şahika Öncü Minikler",
   domain: "sahikaoncuminikler.com",
   url: "https://www.sahikaoncuminikler.com",
@@ -54,19 +54,20 @@ export const siteConfig = {
 } as const;
 
 export const navLinks = [
-  { href: "/", label: "Ana Sayfa" },
-  { href: "/hakkimizda", label: "Hakkımızda" },
-  { href: "/programlar", label: "Programlar" },
-  { href: "/beslenme", label: "Beslenme" },
-  { href: "/sss", label: "SSS" },
-  { href: "/iletisim", label: "İletişim" },
+  { href: "/", label: "Ana Sayfa", homeHash: null },
+  { href: "/hakkimizda", label: "Hakkımızda", homeHash: "#hakkimizda" },
+  { href: "/programlar", label: "Programlar", homeHash: "#programlar" },
+  { href: "/beslenme", label: "Beslenme", homeHash: "#beslenme" },
+  { href: "/galeri", label: "Galeri", homeHash: "#galeri" },
+  { href: "/sss", label: "SSS", homeHash: "#sss" },
+  { href: "/iletisim", label: "İletişim", homeHash: "#iletisim" },
 ] as const;
 
 export const aboutLead =
   "Şahika Öncü Minikler, Denizli'nin ilk ve tek butik kreşi olarak 0–6 yaş çocuklara çocuk merkezli, yaratıcı ve güvenilir bir ortam sunar.";
 
 export const aboutBody =
-  "Küçük gruplar, iki çocuk gelişimi uzmanı ve doğal yaşam anlayışıyla miniklerinizin hayal gücünü, cesaretini ve sosyal becerilerini destekliyoruz. İşlenmiş gıda kullanmadan, kendi üretimimiz organik ürünlerle beslenmeye özel önem veriyoruz.";
+  "Şahika Hoca'nın önderliğinde küçük gruplar, iki çocuk gelişimi uzmanı ve doğal yaşam anlayışıyla miniklerinizin hayal gücünü, cesaretini ve sosyal becerilerini destekliyoruz. İşlenmiş gıda kullanmadan, kendi üretimimiz organik ürünlerle beslenmeye özel önem veriyoruz.";
 
 export const whatsappLink = (message?: string) => {
   const text = encodeURIComponent(
