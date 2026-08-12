@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { AgeBands } from "@/components/AgeBands";
+import { AgeProgramDetail } from "@/components/AgeProgramDetail";
 import { BranchTeachers } from "@/components/BranchTeachers";
 import { MontessoriSection } from "@/components/MontessoriSection";
 import { VisitStrip } from "@/components/VisitStrip";
-import { focusAreas, programs } from "@/lib/content";
+import {
+  ageProgram18to27,
+  ageProgram28to36,
+  ageProgram36to48,
+  focusAreas,
+  programs,
+} from "@/lib/content";
 import { homePhotos } from "@/lib/gallery";
 import { pageMeta } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
@@ -48,7 +54,23 @@ export default function ProgramlarPage() {
         </p>
       </section>
 
-      <AgeBands showProgramLink={false} />
+      <AgeProgramDetail
+        id="18-27-ay"
+        program={ageProgram18to27}
+        theme="leaf"
+      />
+
+      <AgeProgramDetail
+        id="28-36-ay"
+        program={ageProgram28to36}
+        theme="sun"
+      />
+
+      <AgeProgramDetail
+        id="36-48-ay"
+        program={ageProgram36to48}
+        theme="coral"
+      />
 
       <MontessoriSection />
 

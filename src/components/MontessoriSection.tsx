@@ -46,7 +46,7 @@ export function MontessoriSection({ headingLevel = "h2" }: Props) {
           }}
         >
           <Heading className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-            Montessori İle Keşfederek Öğrenmek
+            Yaparak Ve Yaşayarak Öğrenmek
           </Heading>
           <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink/80">
             {montessoriLead}

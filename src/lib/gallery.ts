@@ -268,5 +268,10 @@ export const homePhotos = {
   programs: galleryImages[12]!,
   visit: galleryImages[25]!,
   montessori: galleryImages[8]!,
+  garden: {
+    ...galleryImages[22]!,
+    alt: "Şahika Öncü Minikler bahçesinde açık havada oyun",
+    caption: "Bahçemizde Oyun",
+  },
 };
 

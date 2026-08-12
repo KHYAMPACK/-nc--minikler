@@ -7,14 +7,12 @@ export const siteConfig = {
   description:
     "Denizli'nin ilk ve tek butik kreşi. 0–6 yaş çocuklar için çocuk merkezli eğitim, organik beslenme ve güvenli ortam. Merkezefendi / Denizli.",
   tagline: "Çünkü içinde bir çocuk var",
-  phoneDisplay: "0553 704 04 20",
-  phoneTel: "+905537040420",
+  phoneDisplay: "0507 245 37 46",
+  phoneTel: "+905072453746",
   phones: [
-    { display: "0258 374 04 20", tel: "+902583740420", label: "Sabit hat" },
-    { display: "0553 704 04 20", tel: "+905537040420", label: "Cep / WhatsApp" },
-    { display: "0507 245 37 46", tel: "+905072453746", label: "Cep" },
+    { display: "0507 245 37 46", tel: "+905072453746", label: "Telefon / WhatsApp" },
   ],
-  whatsapp: "905537040420",
+  whatsapp: "905072453746",
   email: "info@sahikaoncuminikler.com",
   instagram: "https://www.instagram.com/oncuminikler/",
   instagramHandle: "@oncuminikler",
@@ -64,10 +62,10 @@ export const navLinks = [
 ] as const;
 
 export const aboutLead =
-  "Şahika Öncü Minikler, Denizli'nin ilk ve tek butik kreşi olarak 0–6 yaş çocuklara çocuk merkezli, yaratıcı ve güvenilir bir ortam sunar.";
+  "Şahika Öncü Minikler Kreş’te her çocuk özeldir, her çocuk yakın ilgiyi hak eder.";
 
 export const aboutBody =
-  "Şahika Hoca'nın önderliğinde küçük gruplar, iki çocuk gelişimi uzmanı ve doğal yaşam anlayışıyla miniklerinizin hayal gücünü, cesaretini ve sosyal becerilerini destekliyoruz. İşlenmiş gıda kullanmadan, kendi üretimimiz organik ürünlerle beslenmeye özel önem veriyoruz.";
+  "Eğitim anlayışımızın merkezinde; çocuklarımızın gelişim özelliklerini bilen, alanında uzman, deneyimli ve sevgi dolu öğretmenlerimiz yer alır. Her sınıfımızda iki öğretmen görev yapar. Böylece çocuklarımızın bireysel ihtiyaçlarını daha yakından takip eder, gelişim süreçlerini titizlikle gözlemler ve her bir çocuğumuza ihtiyaç duyduğu ilgi ve desteği sunarız. Öğretmenlerimiz yalnızca eğitim veren değil; çocuklarımızın kendilerini güvende, değerli ve mutlu hissettikleri bir öğrenme ortamının rehberleridir. Deneyimli öğretmenler, güçlü iletişim, birebir ilgi… Çünkü Öncü Minikler’de her çocuk bizim için değerlidir.";
 
 export const whatsappLink = (message?: string) => {
   const text = encodeURIComponent(

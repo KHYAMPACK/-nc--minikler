@@ -99,7 +99,7 @@ export const pageMeta = {
   iletisim: {
     title: "İletişim | Kreş Denizli — Şahika Öncü Minikler",
     description:
-      "Yenişehir Mah. 48 Sk. No: 34 Merkezefendi/Denizli. Telefon: 0553 704 04 20 · WhatsApp ve harita.",
+      "Yenişehir Mah. 48 Sk. No: 34 Merkezefendi/Denizli. Telefon: 0507 245 37 46 · WhatsApp ve harita.",
   },
   gizlilik: {
     title: "Gizlilik ve KVKK | Şahika Öncü Minikler",

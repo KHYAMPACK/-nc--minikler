@@ -15,11 +15,7 @@ const titleStyles = {
   coral: "text-[#bf360c]",
 } as const;
 
-type Props = {
-  showProgramLink?: boolean;
-};
-
-export function AgeBands({ showProgramLink = true }: Props) {
+export function AgeBands() {
   return (
     <section id="yas" className="scroll-mt-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -41,7 +37,10 @@ export function AgeBands({ showProgramLink = true }: Props) {
               className={`age-band border-t ${isLast ? "border-b-0" : "border-b"} ${bandStyles[group.accent]}`}
               style={{ animationDelay: `${i * 0.08}s` }}
             >
-              <div className="mx-auto grid max-w-6xl items-center gap-4 px-4 py-5 sm:grid-cols-[1fr_9rem] sm:gap-8 sm:px-6 sm:py-6 lg:grid-cols-[1fr_12rem]">
+              <Link
+                href={group.detailHref}
+                className="mx-auto grid max-w-6xl items-center gap-4 px-4 py-5 transition hover:bg-white/25 sm:grid-cols-[1fr_9rem] sm:gap-8 sm:px-6 sm:py-6 lg:grid-cols-[1fr_12rem]"
+              >
                 <div>
                   <h3
                     className={`font-display text-2xl font-semibold sm:text-3xl ${titleStyles[group.accent]}`}
@@ -51,14 +50,9 @@ export function AgeBands({ showProgramLink = true }: Props) {
                   <p className="mt-2 text-base leading-relaxed text-muted sm:text-lg">
                     {group.text}
                   </p>
-                  {showProgramLink && (
-                    <Link
-                      href="/programlar"
-                      className="mt-3 inline-flex text-sm font-semibold text-ink underline-offset-4 hover:underline"
-                    >
-                      Program detayı →
-                    </Link>
-                  )}
+                  <span className="mt-3 inline-flex text-sm font-semibold text-ink underline-offset-4">
+                    Program detayı →
+                  </span>
                 </div>
                 {photo && (
                   <div className="relative aspect-square w-full overflow-hidden sm:justify-self-end">
@@ -71,7 +65,7 @@ export function AgeBands({ showProgramLink = true }: Props) {
                     />
                   </div>
                 )}
-              </div>
+              </Link>
             </article>
           );
         })}

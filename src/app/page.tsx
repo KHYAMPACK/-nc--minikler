@@ -6,12 +6,14 @@ import { BranchTeachers } from "@/components/BranchTeachers";
 import { ContactForm } from "@/components/ContactForm";
 import { DayRhythm } from "@/components/DayRhythm";
 import { GalleryMarquee } from "@/components/GalleryMarquee";
+import { GardenSection } from "@/components/GardenSection";
 import { Hero } from "@/components/Hero";
 import { MontessoriSection } from "@/components/MontessoriSection";
 import {
   faqs,
   focusAreas,
   nutritionPoints,
+  processClosing,
   processSteps,
   programs,
 } from "@/lib/content";
@@ -44,9 +46,10 @@ const nutritionDots = [
 ] as const;
 
 const stepAccents = [
-  { num: "bg-[#4CAF50]", soft: "bg-[#4CAF50]/15" },
-  { num: "bg-[#FF7043]", soft: "bg-[#FF7043]/15" },
-  { num: "bg-[#9C27B0]", soft: "bg-[#9C27B0]/12" },
+  { num: "bg-[#4CAF50]", soft: "bg-[#4CAF50]/15", bar: "bg-[#4CAF50]" },
+  { num: "bg-[#FF7043]", soft: "bg-[#FF7043]/15", bar: "bg-[#FF7043]" },
+  { num: "bg-[#9C27B0]", soft: "bg-[#9C27B0]/12", bar: "bg-[#9C27B0]" },
+  { num: "bg-[#FF9800]", soft: "bg-[#FF9800]/18", bar: "bg-[#FF9800]" },
 ] as const;
 
 const focusDots = [
@@ -68,7 +71,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl items-stretch lg:grid-cols-2">
           <div className="flex flex-col justify-center px-4 py-12 sm:px-6 sm:py-14 lg:pr-10">
             <h2 className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl">
-              Şahika&apos;da{" "}
+              Öncüde{" "}
               <span className="text-[#FF7043]">Eğitim</span>
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">{aboutLead}</p>
@@ -145,6 +148,8 @@ export default function HomePage() {
       <GalleryMarquee />
 
       <MontessoriSection />
+
+      <GardenSection />
 
       <DayRhythm />
 
@@ -307,33 +312,44 @@ export default function HomePage() {
             "linear-gradient(115deg, rgba(76,175,80,0.14) 0%, rgba(255,245,157,0.45) 48%, rgba(156,39,176,0.12) 100%)",
         }}
       >
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-14">
+        <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-14">
           <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
             Kayıt Nasıl İşler?
           </h2>
-          <p className="mt-2 max-w-2xl text-muted">
-            Üç adımda tanışır, ziyaret eder ve programı netleştiririz.
+          <p className="mt-2 text-muted">
+            Kayıt sürecimiz öncelikle randevu oluşturulmasıyla başlar. Randevu
+            gününde ise şöyle ilerleriz:
           </p>
-          <ol className="mt-8 grid gap-4 sm:grid-cols-3 sm:gap-5">
+
+          <ol className="mt-8 space-y-0">
             {processSteps.map((step, i) => {
               const accent = stepAccents[i] ?? stepAccents[0];
               return (
-                <li key={step.step} className={`${accent.soft} p-5 sm:p-6`}>
-                  <p
-                    className={`inline-flex h-9 w-9 items-center justify-center rounded-full text-sm font-bold text-white ${accent.num}`}
+                <li
+                  key={step.step}
+                  className={`flex gap-4 border-b border-[#8BC34A]/25 py-6 first:border-t sm:gap-5`}
+                >
+                  <span
+                    className={`mt-0.5 inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-bold text-white ${accent.num}`}
                   >
                     {step.step}
-                  </p>
-                  <h3 className="mt-3 font-display text-xl font-semibold text-ink">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted sm:text-base">
-                    {step.text}
-                  </p>
+                  </span>
+                  <div>
+                    <h3 className="font-display text-xl font-semibold text-ink">
+                      {step.title}
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-muted">
+                      {step.text}
+                    </p>
+                  </div>
                 </li>
               );
             })}
           </ol>
+
+          <p className="mt-8 font-display text-xl font-semibold leading-snug text-[#2e7d32] sm:text-2xl">
+            {processClosing}
+          </p>
         </div>
       </section>
 
