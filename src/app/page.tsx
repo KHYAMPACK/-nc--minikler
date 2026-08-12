@@ -8,6 +8,7 @@ import { DayRhythm } from "@/components/DayRhythm";
 import { GalleryMarquee } from "@/components/GalleryMarquee";
 import { GardenSection } from "@/components/GardenSection";
 import { Hero } from "@/components/Hero";
+import { ManifestoBand } from "@/components/ManifestoBand";
 import { MontessoriSection } from "@/components/MontessoriSection";
 import {
   faqs,
@@ -302,6 +303,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ManifestoBand />
 
       {/* ——— Enrollment steps ——— */}
       <section
