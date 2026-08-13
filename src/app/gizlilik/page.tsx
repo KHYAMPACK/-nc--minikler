@@ -71,6 +71,14 @@ export default function GizlilikPage() {
             iletebilirsiniz.
           </p>
         </div>
+
+        <div>
+          <h2 className="font-display text-2xl text-ink">Fotoğraflar</h2>
+          <p className="mt-3">
+            Sitedeki bahçe, oyun ve etkinlik görselleri temsili görsellerdir;
+            kayıtlı çocuklarımızın fotoğrafları yayınlanmaz.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import { Quicksand, Source_Sans_3 } from "next/font/google";
 import { FloatingActions } from "@/components/FloatingActions";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { localBusinessJsonLd, pageMeta } from "@/lib/seo";
+import { localBusinessJsonLd, pageMeta, serializeJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -86,7 +86,7 @@ export default function RootLayout({
       <body className={`${display.variable} ${body.variable} antialiased`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
         <div className="page-shell flex min-h-screen flex-col">
           <Header />

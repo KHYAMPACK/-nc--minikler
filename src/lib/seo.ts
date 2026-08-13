@@ -1,5 +1,9 @@
 import { siteConfig } from "./site";
 
+export function serializeJsonLd(data: unknown) {
+  return JSON.stringify(data).replace(/</g, "\\u003c");
+}
+
 export function localBusinessJsonLd() {
   return {
     "@context": "https://schema.org",
@@ -94,7 +98,7 @@ export const pageMeta = {
   galeri: {
     title: "Galeri | Şahika Öncü Minikler Kreş Denizli",
     description:
-      "Şahika Öncü Minikler Kreş'ten kareler. Denizli Merkezefendi butik kreş ortamı ve etkinlikler.",
+      "Bahçe, oyun ve etkinliklerden temsili kareler. Kayıtlı çocuklarımızın fotoğrafları bu sitede yayınlanmaz.",
   },
   iletisim: {
     title: "İletişim | Kreş Denizli — Şahika Öncü Minikler",

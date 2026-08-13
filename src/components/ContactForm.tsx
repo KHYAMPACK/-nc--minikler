@@ -10,10 +10,13 @@ export function ContactForm() {
 
   function onSubmit(e: FormEvent) {
     e.preventDefault();
+    const safeName = name.trim().slice(0, 80);
+    const safePhone = phone.trim().slice(0, 20);
+    const safeMessage = message.trim().slice(0, 500);
     const body = [
-      `Merhaba, ben ${name || "bir veli"}.`,
-      phone ? `Telefon: ${phone}` : null,
-      message || "Kreş hakkında bilgi almak istiyorum.",
+      `Merhaba, ben ${safeName || "bir veli"}.`,
+      safePhone ? `Telefon: ${safePhone}` : null,
+      safeMessage || "Kreş hakkında bilgi almak istiyorum.",
     ]
       .filter(Boolean)
       .join("\n");
@@ -32,6 +35,7 @@ export function ContactForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
+          maxLength={80}
           className="w-full rounded-xl border border-line bg-white px-3 py-2.5 text-ink outline-none ring-leaf/30 focus:ring-2"
           placeholder="Ad Soyad"
           autoComplete="name"
@@ -47,6 +51,7 @@ export function ContactForm() {
           type="tel"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
+          maxLength={20}
           className="w-full rounded-xl border border-line bg-white px-3 py-2.5 text-ink outline-none ring-leaf/30 focus:ring-2"
           placeholder="05xx xxx xx xx"
           autoComplete="tel"
@@ -62,6 +67,7 @@ export function ContactForm() {
           rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          maxLength={500}
           className="w-full rounded-xl border border-line bg-white px-3 py-2.5 text-ink outline-none ring-leaf/30 focus:ring-2"
           placeholder="Çocuğunuzun yaşı, tam gün / yarım gün tercihi..."
         />

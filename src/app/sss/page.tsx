@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { VisitStrip } from "@/components/VisitStrip";
 import { faqs } from "@/lib/content";
-import { pageMeta } from "@/lib/seo";
+import { pageMeta, serializeJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: { absolute: pageMeta.sss.title },
@@ -32,7 +32,7 @@ export default function SssPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }}
       />
       <section className="mx-auto max-w-3xl px-4 pb-8 pt-28 sm:px-6 lg:pt-32">
         <h1 className="font-display text-4xl font-semibold text-ink sm:text-5xl">

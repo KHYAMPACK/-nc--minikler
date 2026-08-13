@@ -26,7 +26,8 @@ export default function GaleriPage() {
               Galeri
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-              Şahika Öncü Minikler&apos;den kareler. Daha fazlası için Instagram{" "}
+              Bahçe, oyun ve etkinliklerden temsili kareler. Kayıtlı
+              çocuklarımızın fotoğrafları bu sitede yayınlanmaz. Instagram{" "}
               <a
                 href={siteConfig.instagram}
                 target="_blank"
