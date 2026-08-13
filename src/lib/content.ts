@@ -440,7 +440,7 @@ export const processClosing =
 export const faqs = [
   {
     q: "Hangi Yaş Gruplarını Kabul Ediyorsunuz?",
-    a: "Programlarımız özellikle 16–27 ay, 28–36 ay ve 36–48 ay gruplarına göre yapılandırılır.",
+    a: "Programlarımız özellikle 18–27 ay, 28–36 ay ve 36–48 ay gruplarına göre yapılandırılır.",
   },
   {
     q: "Günlük Saatleriniz Nedir?",

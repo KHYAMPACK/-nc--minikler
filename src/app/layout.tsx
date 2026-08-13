@@ -50,20 +50,11 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: pageMeta.home.title,
     description: pageMeta.home.description,
-    images: [
-      {
-        url: "/logo.png",
-        width: 512,
-        height: 512,
-        alt: "Şahika Öncü Minikler logosu",
-      },
-    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: pageMeta.home.title,
     description: pageMeta.home.description,
-    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -88,9 +79,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
-        <div className="page-shell flex min-h-screen flex-col">
+        <div className="page-shell relative flex min-h-screen flex-col">
+          <a href="#icerik" className="skip-link">
+            İçeriğe geç
+          </a>
           <Header />
-          <main className="flex-1">{children}</main>
+          <main id="icerik" className="flex-1">
+            {children}
+          </main>
           <Footer />
           <FloatingActions />
         </div>

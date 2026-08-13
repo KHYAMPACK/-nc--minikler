@@ -41,7 +41,7 @@ export function ContactForm() {
           autoComplete="name"
         />
       </div>
-      <div className="hidden sm:block">
+      <div>
         <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-ink">
           Telefon
         </label>

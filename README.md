@@ -16,11 +16,16 @@ npm run build
 npm start
 ```
 
-## Vercel
+## Yayın (Vercel)
 
 1. GitHub'a push edin
 2. [vercel.com](https://vercel.com) ile projeyi import edin
-3. Domain: `sahikaoncuminikler.com` (veya tercih ettiğiniz alan adı)
+
+- Production: main (veya bağlı branch) → sahikaoncuminikler.com
+- Preview: her PR bir Vercel Preview URL alır — prod’a basmadan kontrol edin
+- Rollback: Vercel → Project → Deployments → önceki successful deploy → Promote / Instant Rollback (< 5 dk)
+
+Canlı kanonik adres: https://www.sahikaoncuminikler.com
 
 ## Sayfalar
 
@@ -28,6 +33,7 @@ npm start
 - `/hakkimizda`
 - `/programlar`
 - `/beslenme`
+- `/galeri`
 - `/sss`
 - `/iletisim`
 - `/gizlilik`

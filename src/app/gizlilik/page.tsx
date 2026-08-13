@@ -54,12 +54,67 @@ export default function GizlilikPage() {
         </div>
 
         <div>
+          <h2 className="font-display text-2xl text-ink">
+            Çocuklara İlişkin Bilgiler
+          </h2>
+          <p className="mt-3">
+            Bu site ebeveynlere yöneliktir; çocuklara doğrudan çevrimiçi hizmet
+            sunulmaz. Form veya WhatsApp mesajında paylaştığınız çocuk yaşı,
+            adı gibi bilgiler, velinin kendi iradesiyle ilettiği verilerdir ve
+            yalnızca talebinizi yanıtlamak için kullanılır.
+          </p>
+        </div>
+
+        <div>
           <h2 className="font-display text-2xl text-ink">Aktarım</h2>
           <p className="mt-3">
             Form gönderimi WhatsApp uygulamasına yönlendirir; bu durumda
             mesajlaşma Meta Platforms Ireland Limited / WhatsApp altyapısı
-            üzerinden gerçekleşir. Yasal zorunluluk olmadıkça verilerinizi üçüncü
-            taraflara satmayız.
+            üzerinden gerçekleşir. Instagram profilimize yalnızca bağlantı
+            verilir; sitede gömülü Instagram bileşeni bulunmaz. Yasal
+            zorunluluk olmadıkça verilerinizi üçüncü taraflara satmayız.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-display text-2xl text-ink">Harita</h2>
+          <p className="mt-3">
+            Ana sayfa ve iletişim sayfasında Google Haritalar gömülü haritası
+            kullanılır. Haritayı görüntülediğinizde IP adresiniz ve teknik
+            verileriniz Google’a iletilebilir. Google’ın gizlilik politikasına{" "}
+            <a
+              href="https://policies.google.com/privacy?hl=tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-leaf-dark underline underline-offset-2 hover:text-leaf"
+            >
+              bu bağlantıdan
+            </a>{" "}
+            ulaşabilirsiniz.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-display text-2xl text-ink">Barındırma</h2>
+          <p className="mt-3">
+            Site Vercel üzerinde yayınlanır. Sayfa ziyaretlerinde IP adresi ve
+            teknik günlükler barındırma altyapısında işlenebilir.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-display text-2xl text-ink">Saklama</h2>
+          <p className="mt-3">
+            WhatsApp mesajları, talebinizin sonuçlanmasına kadar işlenir. Silme
+            taleplerinizi {siteConfig.email} adresine iletebilirsiniz.
+          </p>
+        </div>
+
+        <div>
+          <h2 className="font-display text-2xl text-ink">Çerezler</h2>
+          <p className="mt-3">
+            Pazarlama çerezi ve analitik araçları kullanılmaz. Zorunlu teknik
+            barındırma dışında izleme yapılmaz.
           </p>
         </div>
 
@@ -73,10 +128,10 @@ export default function GizlilikPage() {
         </div>
 
         <div>
-          <h2 className="font-display text-2xl text-ink">Fotoğraflar</h2>
+          <h2 className="font-display text-2xl text-ink">Görseller</h2>
           <p className="mt-3">
-            Sitedeki bahçe, oyun ve etkinlik görselleri temsili görsellerdir;
-            kayıtlı çocuklarımızın fotoğrafları yayınlanmaz.
+            Sitedeki bahçe, oyun ve etkinlik görselleri temsili ve üretilmiş
+            görsellerdir; kayıtlı çocuklarımızın fotoğrafları yayınlanmaz.
           </p>
         </div>
       </div>

@@ -44,6 +44,26 @@ html {
   scroll-behavior: smooth;
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 100;
+  background: var(--color-ink);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-leaf);
+  outline-offset: 3px;
+}
+
 body {
   background: var(--color-meadow);
   color: var(--color-ink);
@@ -366,7 +386,8 @@ body {
   will-change: transform;
 }
 
-.gallery-marquee:hover .gallery-marquee-track {
+.gallery-marquee:hover .gallery-marquee-track,
+.gallery-marquee.is-paused .gallery-marquee-track {
   animation-play-state: paused;
 }
 

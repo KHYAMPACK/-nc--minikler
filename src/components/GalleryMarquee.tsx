@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import {
   marqueeDisplaySize,
   marqueeImages,
@@ -42,6 +45,8 @@ function MarqueeTrack({
 }
 
 export function GalleryMarquee() {
+  const [paused, setPaused] = useState(false);
+
   return (
     <section
       id="galeri"
@@ -66,15 +71,25 @@ export function GalleryMarquee() {
             Kreş Yaşamından Kareler
           </h2>
         </div>
-        <Link
-          href="/galeri"
-          className="shrink-0 rounded-full bg-white/85 px-4 py-2 text-sm font-semibold text-ink transition hover:bg-white"
-        >
-          Tüm galeri →
-        </Link>
+        <div className="flex shrink-0 items-center gap-2">
+          <button
+            type="button"
+            className="rounded-full bg-white/85 px-4 py-2 text-sm font-semibold text-ink transition hover:bg-white"
+            onClick={() => setPaused((p) => !p)}
+            aria-pressed={paused}
+          >
+            {paused ? "Oynat" : "Durdur"}
+          </button>
+          <Link
+            href="/galeri"
+            className="rounded-full bg-white/85 px-4 py-2 text-sm font-semibold text-ink transition hover:bg-white"
+          >
+            Tüm galeri →
+          </Link>
+        </div>
       </div>
 
-      <div className="gallery-marquee relative">
+      <div className={`gallery-marquee relative${paused ? " is-paused" : ""}`}>
         <div className="gallery-marquee-track flex w-max items-center">
           <MarqueeTrack images={marqueeImages} />
           <MarqueeTrack images={marqueeImages} ariaHidden />
