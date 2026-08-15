@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BrandName, Logo } from "@/components/Logo";
 import { navLinks, siteConfig, whatsappLink } from "@/lib/site";
@@ -97,8 +98,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="relative border-t border-white/10 px-4 py-4 sm:px-6">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 text-xs text-[#b7d4c2]/90 sm:flex-row">
+      <div className="relative border-t border-white/10 px-4 py-5 sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs text-[#b7d4c2]/90 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. Tüm hakları saklıdır.
           </p>
@@ -106,9 +107,17 @@ export function Footer() {
             href="https://ekizyazilim.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition opacity-90 hover:opacity-100"
+            className="inline-flex items-center gap-2.5 opacity-90 transition hover:opacity-100"
+            aria-label="Powered by Ekiz Yazılım — ekizyazilim.com"
           >
-            Powered by Ekiz Yazılım
+            <span className="text-sm text-[#b7d4c2]">Powered by</span>
+            <Image
+              src="/ekiz-yazilim-watermark.png"
+              alt="ekiz YAZILIM"
+              width={280}
+              height={72}
+              className="h-11 w-auto mix-blend-screen sm:h-14"
+            />
           </a>
         </div>
       </div>
