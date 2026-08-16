@@ -73,7 +73,7 @@ export function Hero() {
           Denizli&apos;nin Butik Kreşi — Çocuk Merkezli, Güvenli Ve Doğal.
         </p>
         <p className="hero-support mx-auto mt-1.5 max-w-lg text-xs leading-relaxed text-muted sm:mt-2 sm:text-sm">
-          0–6 Yaş · Küçük Gruplar · Organik Beslenme.
+          16-48 Ay · Küçük Gruplar · Organik Beslenme.
           {` “${siteConfig.tagline}.”`}
         </p>
 

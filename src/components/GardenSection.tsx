@@ -23,7 +23,7 @@ export function GardenSection() {
           </p>
           <p className="mt-3 max-w-xl leading-relaxed text-ink/75">
             Güvenli oyun alanımızda açık hava etkinlikleri, serbest oyun ve doğa
-            ile buluşma — her çocuğun temposuna saygıyla.
+            ile buluşma — her çocuğun temposuna saygıyla ilerliyoruz.
           </p>
         </div>
 

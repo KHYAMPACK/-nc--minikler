@@ -22,9 +22,6 @@ export function AgeBands() {
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
           Yaş Grupları
         </h2>
-        <p className="mt-2 max-w-2xl text-muted">
-          Küçük gruplar, iki uzman — her yaşa kendi temposu.
-        </p>
       </div>
 
       <div className="mt-8 space-y-0">

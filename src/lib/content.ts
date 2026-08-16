@@ -341,7 +341,7 @@ export const montessoriPrinciples = [
   },
   {
     title: "Hazırlanmış Ortam",
-    text: "Ulaşılabilir malzemeler, düzenli köşeler ve çocuğun boyuna uygun bir yaşam alanı.",
+    text: "Ulaşılabilir malzemeler, düzenli köşeler ve çocuğunuza uygun bir yaşam alanı.",
     color: "yellow",
   },
   {

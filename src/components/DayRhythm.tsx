@@ -28,9 +28,6 @@ export function DayRhythm() {
         <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
           Bir Günün Ritmi
         </h2>
-        <p className="mt-2 max-w-2xl text-muted">
-          Çalışan ebeveynler için erken açılış; gün boyu oyun, öğün ve esnek çıkış.
-        </p>
 
         <ol className="mt-8 flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-6 md:gap-0 md:overflow-visible md:pb-0">
           {dayRhythm.map((item, i) => (
