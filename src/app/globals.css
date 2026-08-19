@@ -146,6 +146,26 @@ body {
   animation: hero-ken 7s ease-out both;
 }
 
+/* ——— Garden photo stage ——— */
+.garden-slide {
+  opacity: 0;
+  transform: scale(1.04);
+  transition:
+    opacity 1.2s ease,
+    transform 6.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.garden-slide-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.garden-slide-active img {
+  animation: hero-ken 7s ease-out both;
+}
+
 .hero-veil {
   z-index: 1;
   background:
@@ -408,7 +428,10 @@ body {
 
   .hero-slide,
   .hero-slide-active,
-  .hero-slide-active img {
+  .hero-slide-active img,
+  .garden-slide,
+  .garden-slide-active,
+  .garden-slide-active img {
     animation: none;
     transition: opacity 0.4s ease;
     transform: none;

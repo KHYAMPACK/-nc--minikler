@@ -10,6 +10,7 @@ import { GardenSection } from "@/components/GardenSection";
 import { Hero } from "@/components/Hero";
 import { ManifestoBand } from "@/components/ManifestoBand";
 import { MontessoriSection } from "@/components/MontessoriSection";
+import { TeamContinuity } from "@/components/TeamContinuity";
 import {
   faqs,
   focusAreas,
@@ -145,6 +146,8 @@ export default function HomePage() {
           </article>
         </div>
       </section>
+
+      <TeamContinuity />
 
       <GalleryMarquee />
 
@@ -459,7 +462,14 @@ export default function HomePage() {
                   Adres
                 </h3>
                 <p className="mt-2 leading-relaxed text-muted">
-                  {siteConfig.address.full}
+                  <a
+                    href={siteConfig.mapLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#2e7d32] hover:underline"
+                  >
+                    {siteConfig.address.full}
+                  </a>
                 </p>
                 <a
                   href={siteConfig.mapLink}

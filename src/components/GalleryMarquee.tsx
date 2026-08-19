@@ -68,7 +68,7 @@ export function GalleryMarquee() {
       <div className="relative mb-6 flex items-end justify-between gap-4 px-4 sm:px-6 lg:mx-auto lg:max-w-6xl lg:px-6">
         <div>
           <h2 className="font-display text-3xl font-semibold text-ink sm:text-4xl">
-            Kreş Yaşamından Kareler
+            Kreşimizden Kareler
           </h2>
         </div>
         <div className="flex shrink-0 items-center gap-2">

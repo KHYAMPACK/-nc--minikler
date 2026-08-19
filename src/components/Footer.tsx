@@ -31,7 +31,14 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-[#b7d4c2]">
-              {siteConfig.address.full}
+              <a
+                href={siteConfig.mapLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white hover:underline"
+              >
+                {siteConfig.address.full}
+              </a>
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <a

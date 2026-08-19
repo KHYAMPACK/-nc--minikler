@@ -1,3 +1,25 @@
+export const teamContinuity = {
+  title: "Güçlü Bir Eğitim, Güçlü Bir Ekip ile Başlar",
+  body: "Öğretmenlerimizin büyük bir bölümü uzun yıllardır kurumumuzun eğitim yolculuğuna eşlik ediyor. Bizim için bu süreklilik yalnızca çalışma yılı değil; ortak bir eğitim anlayışının, güçlü ekip kültürünün ve kuruma duyulan aidiyetin göstergesidir.",
+  pillars: [
+    {
+      title: "Ortak Anlayış",
+      text: "Yıllar içinde birlikte yoğrulan bir dil: her çocuğun temposuna saygı, aynı bakış, aynı özen.",
+      accent: "green" as const,
+    },
+    {
+      title: "Ekip Kültürü",
+      text: "Aynı çatı altında uzun yıllar çalışmak; birbirini tamamlayan bir ritim ve güvenilir bir günlük işleyiş.",
+      accent: "coral" as const,
+    },
+    {
+      title: "Aidiyet",
+      text: "Burada kalmayı seçmek, çocuklarınızın her sabah tanıdık yüzlerle karşılanması demektir.",
+      accent: "berry" as const,
+    },
+  ],
+} as const;
+
 export const highlights = [
   {
     title: "Butik Yaklaşım",

@@ -28,9 +28,8 @@ export const siteConfig = {
     lng: 29.0872,
   },
   mapEmbedUrl:
-    "https://www.google.com/maps?q=Yenişehir+Mahallesi+48+Sokak+No:+34+Merkezefendi+Denizli&z=17&hl=tr&output=embed",
-  mapLink:
-    "https://www.google.com/maps/search/?api=1&query=Yenişehir+Mahallesi+48+Sokak+No:+34+Merkezefendi+Denizli",
+    "https://www.google.com/maps?q=Şahika+Öncü+Minikler+Kreş&z=17&hl=tr&output=embed",
+  mapLink: "https://share.google/0DSWjqNrUT3agupTA",
   hours: {
     fullDay: "07:30 – 18:30",
     standardStart: "09:00",

@@ -130,8 +130,10 @@ export default function GizlilikPage() {
         <div>
           <h2 className="font-display text-2xl text-ink">Görseller</h2>
           <p className="mt-3">
-            Sitedeki bahçe, oyun ve etkinlik görselleri temsili ve üretilmiş
-            görsellerdir; kayıtlı çocuklarımızın fotoğrafları yayınlanmaz.
+            Ana sayfadaki bahçe, oyun ve etkinlik görselleri temsili ve
+            üretilmiş görsellerdir. Galeri sayfasındaki fotoğraflar
+            kurumumuzun iç mekânını gösterir. Kayıtlı çocuklarımızın
+            fotoğrafları yayınlanmaz.
           </p>
         </div>
       </div>

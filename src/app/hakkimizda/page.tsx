@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { TeamContinuity } from "@/components/TeamContinuity";
 import { VisitStrip } from "@/components/VisitStrip";
 import { pageMeta } from "@/lib/seo";
 import { aboutBody, aboutLead, siteConfig } from "@/lib/site";
@@ -88,6 +89,8 @@ export default function HakkimizdaPage() {
           </article>
         </div>
       </section>
+
+      <TeamContinuity />
 
       <section className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
         <h2 className="font-display text-2xl font-semibold text-ink">

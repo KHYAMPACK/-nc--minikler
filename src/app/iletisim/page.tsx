@@ -47,7 +47,14 @@ export default function IletisimPage() {
                 Adres
               </h2>
               <p className="mt-3 leading-relaxed text-muted">
-                {siteConfig.address.full}
+                <a
+                  href={siteConfig.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-leaf-dark hover:underline"
+                >
+                  {siteConfig.address.full}
+                </a>
               </p>
               <a
                 href={siteConfig.mapLink}
