@@ -258,6 +258,48 @@ export const galleryImages: GalleryImage[] = [
     4032,
     3024
   ),
+  schoolPhoto(
+    "uyku-odasi-01.jpg",
+    "Mavi duvarlı uyku odasında ayıcık temalı sarı yataklar",
+    "Uyku Odası",
+    3024,
+    4032
+  ),
+  schoolPhoto(
+    "uyku-odasi-02.jpg",
+    "Ay ve yıldız süslemeli uyku odasında ayıcık yataklar",
+    "Uyku Odası",
+    3024,
+    4032
+  ),
+  schoolPhoto(
+    "uyku-odasi-03.jpg",
+    "Sarı ayıcık yataklar ve her yatakta mavi peluş ayı",
+    "Ayıcık Yataklar",
+    3024,
+    4032
+  ),
+  schoolPhoto(
+    "uyku-odasi-04.jpg",
+    "Mavi duvarda ay ve yıldızlarla uyku odası yatak sırası",
+    "Uyku Odası",
+    3024,
+    4032
+  ),
+  schoolPhoto(
+    "uyku-odasi-05.jpg",
+    "Üç ayıcık yatak ve sarı ay-yıldız duvar süslemeleri",
+    "Dinlenme Odası",
+    3024,
+    4032
+  ),
+  schoolPhoto(
+    "uyku-odasi-06.jpg",
+    "Geniş uyku odasında ayıcık temalı yataklar ve tavan ışıkları",
+    "Uyku Odası",
+    4032,
+    3024
+  ),
 ];
 
 /** Marquee display heights (px) — width derived from native ratio */

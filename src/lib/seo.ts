@@ -98,7 +98,7 @@ export const pageMeta = {
   galeri: {
     title: "Galeri | Şahika Öncü Minikler Kreş Denizli",
     description:
-      "Şahika Öncü Minikler Kreş sınıfları, yemek salonu ve oyun köşelerinden iç mekân fotoğrafları. Denizli butik kreş galerisi.",
+      "Şahika Öncü Minikler Kreş sınıfları, yemek salonu, uyku odası ve oyun köşelerinden iç mekân fotoğrafları. Denizli butik kreş galerisi.",
   },
   iletisim: {
     title: "İletişim | Kreş Denizli — Şahika Öncü Minikler",

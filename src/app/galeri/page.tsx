@@ -26,8 +26,8 @@ export default function GaleriPage() {
               Galeri
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-              Sınıflarımız, yemek salonumuz ve oyun köşelerinden iç mekân
-              kareleri. Kayıtlı çocuklarımızın fotoğrafları bu sitede
+              Sınıflarımız, yemek salonumuz, uyku odamız ve oyun köşelerinden
+              iç mekân kareleri. Kayıtlı çocuklarımızın fotoğrafları bu sitede
               yayınlanmaz. Instagram{" "}
               <a
                 href={siteConfig.instagram}
